@@ -1,0 +1,436 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background: linear-gradient( to bottom, #000,#000,#915e40);
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.main-img{
+	width: 25%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.cover{
+	position: absolute;
+	z-index: -2;
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+}
+.gradient{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient( to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1)  );
+}
+.gradient-flip{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient( to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1)  );
+}
+
+.center{
+	padding-top: 10%;
+}
+
+.center h1{
+	color: white;
+	text-align: center;
+	font-size: 5pc;
+}
+.center h3{
+	color: white;
+	text-align: center;
+}
+
+.countdown{
+	font-family: 'PT Serif', serif;
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+.countdown-secondary{
+	font-family: 'PT Serif', serif;
+	opacity: 1;
+	font-size: 2pc;
+	color:  white;
+	text-align: center;
+	transition: all 0.5s ease;	
+}
+.countdown-hide{
+	opacity: 0!important;
+}
+
+.title{
+	margin-left: 25%;
+	text-align: center;
+	color: white;
+	width: 50%;
+}
+
+
+h3{
+	color: white;
+	font-size: 2pc;
+}
+
+.navbar{
+	position: absolute;
+	color: white;
+	width: 95%;
+	padding: 20px;
+	display: flex;
+	transition: all 0.5s ease;
+	padding-left: 5vw;
+	justify-content: space-between;
+}
+
+.navbar-scrolled{
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	background: black;
+	opacity: 0.9;
+	width: 100%;
+	padding: 15px!important;
+}
+
+.navbar .countdown-navbar{
+	opacity: 0;
+}
+
+.navbar-scrolled .countdown-navbar{
+	opacity: 1 !important;
+	color: #ffeb7d;
+	font-size: 1.3pc;
+}
+
+
+.navbar ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style-type: none;
+	width: 500px;
+}
+
+.navbar-scrolled a {
+	color: white !important;
+}
+.navbar-scrolled a:hover {
+	color: #ffeb7d !important;
+}
+.navbar-scrolled .active{
+	color: #ffeb7d !important;
+}
+
+.navbar a{
+	color: #dedede;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+	color: #ffeb7d;
+	text-shadow: 1px solid rgba(255,255,255,0.8);
+	text-decoration: underline bold;
+	font-size: 1.1pc;
+}
+
+.navbar .active{
+	color: #ffeb7d;
+	text-shadow: 1px solid rgba(255,255,255,0.8);
+	text-decoration: underline bold;
+	font-size: 1.1pc;
+}
+
+
+
+
+.item{
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 100vh;
+	justify-content: space-around;
+	margin-top: 40vh;
+}
+
+.item .details{
+	padding-top: 100px;
+	width: 400px;
+	padding: 40px;
+	text-align: center;
+}
+
+.item .pictures{
+	width: 500px;
+	margin-left: 70px;
+}
+
+.details p{
+	margin-top: 67px;
+	font-size: 0.9pc;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.button{
+	color: white;
+	background: rgba(255, 235, 125,0.2);
+	border-radius: 5px;
+	text-decoration: none;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 0.8pc;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: all 0.6s ease
+}
+
+.button:hover{
+	background: #ffeb7d;
+	color: black;
+}
+
+.gallery{
+	margin-top: 50px;
+	/*width: 560px;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+
+.pic{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 1px solid #dedede;
+	margin: 4px;
+	transition: all 0.5s ease;
+}
+.pic:hover{
+	width: 220px;
+	height: 220px;
+}
+
+
+@media screen and (max-width: 1025px) {
+	.countdown-navbar{
+		margin-left: 10vw;
+		font-size: 1pc;
+	}
+	.navbar ul{
+		width: 500px;
+	}
+
+	.item .details{
+		width: 300px;
+	}
+
+	.details h3{
+		margin-bottom: 0px;
+	}
+
+	.details p{
+		margin-top: 20px;
+		max-height: 300px;
+		text-overflow: ellipsis;
+		font-size: 0.8pc;
+	}
+
+	.item .pictures{
+		width: 500px;
+	}
+}
+
+
+
+@media screen and (max-width: 953px) {
+	.countdown-navbar-list{
+		display: none
+	}
+	.countdown-navbar{
+		display: none
+	}
+
+	.navbar{
+		width: 100vw;
+		padding-left:25vw;
+	}
+
+	.navbar-scrolled{
+		width: 100vw;
+		padding-left:25vw!important;
+	}
+
+	.navbar ul{
+		width: 60vw;
+	}
+
+	.item .details{
+		width: 300px;
+		padding: 0px;
+		padding-left: 50px;
+	}
+
+	.details h3{
+		margin-bottom: 0px;
+	}
+
+	.details p{
+		margin-top: 20px;
+		max-height: 300px;
+		text-overflow: ellipsis;
+		font-size: 0.8pc;
+	}
+
+	.item .pictures{
+		width: 300px;
+		height: 470px;
+		margin-top: -60px;
+		overflow-y: hidden;
+	}
+}
+
+
+@media screen and (max-width: 698px) {
+	.countdown-navbar-list{
+		display: none
+	}
+	.countdown-navbar{
+		display: none
+	}
+
+	.navbar{
+		width: 100vw;
+		padding-left:10vw;
+	}
+
+	.navbar-scrolled{
+		width: 100vw;
+		padding-left:10vw!important;
+	}
+
+	.navbar ul{
+		width: 100vw;
+	}
+	.navbar li{
+		margin-right: 10px;
+	}
+
+	.title{
+		width: 350px!important;
+		margin-left: 0px;
+		padding: 40px;
+		text-align: justify;
+	}
+
+	.item .details{
+		padding: 0px;
+		padding-left: 30px;
+	}
+
+	.details h3{
+		margin-bottom: 0px;
+	}
+
+	.details p{
+		margin-top: 20px;
+		max-height: 300px;
+		text-overflow: ellipsis;
+		font-size: 0.8pc;
+		text-align: justify;
+	}
+
+	.item .pictures{
+		display: none;
+	}
+	.recipe{
+		width: 200px;
+		padding-left: 50px;
+		font-size: 0.9pc;	
+		margin-bottom: 20px;
+	}
+}
+
+
+@media screen and (max-width: 376px) {
+	.cover{
+		width: 100vw;
+	}
+	.gradient{
+		width: 100vw;
+	}
+	.gradient-flip{
+		width: 100vw;
+	}
+
+	.navbar{
+		width: 100vw;
+		padding: 30px;
+	}
+	.navbar a{
+		font-size: 0.7pc;
+	}
+	.title{
+		width: 300px!important;
+		font-size: 0.9pc;	
+		text-align: justify;
+	}
+	.item .details{
+		padding: 0px;
+		padding-left: 10px;
+	}
+	.recipe{
+		width: 200px;
+		padding-left: 50px;
+		font-size: 0.9pc;	
+		margin-bottom: 20px;
+	}
+}
+
+
+@media screen and (max-width: 321px) {
+	.cover{
+		width: 100vw;
+	}
+	.gradient{
+		width: 100vw;
+	}
+	.gradient-flip{
+		width: 100vw;
+	}
+
+	.navbar{
+		width: 100vw;
+		padding: 30px;
+	}
+	.navbar a{
+		font-size: 0.7pc;
+	}
+	.title{
+		width: 230px!important;
+		font-size: 0.9pc;	
+		text-align: justify;
+	}
+	.item .details{
+		padding: 0px;
+		padding-left: 10px;
+	}
+	.recipe{
+		width: 200px;
+		padding-left: 50px;
+		font-size: 0.9pc;	
+		margin-bottom: 20px;
+	}
+}
